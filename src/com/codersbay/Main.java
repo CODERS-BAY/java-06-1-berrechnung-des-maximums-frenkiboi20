@@ -37,7 +37,7 @@ public class Main {
             }
         }
 
-        System.out.println(numbs[numbs.length-1]);
+        System.out.println("Das Maximum der Zahlen ist: " + numbs[numbs.length-1]);
 
     }
 }
