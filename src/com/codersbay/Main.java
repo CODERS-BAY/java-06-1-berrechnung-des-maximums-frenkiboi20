@@ -8,11 +8,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int[] numbs = new int[100];
-
-        int count = 0;
+        int[] numbs = {};
 
         while (true) {
+
+            int[] copyNumbs = new int[numbs.length + 1];
 
             System.out.print("Zahl eingeben: ");
             String in = sc.nextLine();
@@ -20,10 +20,15 @@ public class Main {
             if (in.charAt(0) == 'q') {
                 break;
             } else {
-                numbs[count] = Integer.parseInt(in);
-                count++;
-            }
 
+                for (int i = 0; i < numbs.length; i++) {
+                    copyNumbs[i] = numbs[i];
+
+                }
+
+                copyNumbs[copyNumbs.length-1] = Integer.parseInt(in);
+                numbs = copyNumbs;
+            }
         }
 
         // Bubblesort
